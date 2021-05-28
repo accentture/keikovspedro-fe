@@ -1,0 +1,21 @@
+.contianer-cards{
+    width:100%;
+    display: flex;
+    justify-content: space-evenly;
+
+    mat-card{
+        width:25%;
+
+        mat-card-actions{
+            display: flex;
+            justify-content:space-evenly;
+            .result{
+                margin-top: 2%;
+            }
+            .button-vote{
+                background-color: rgb(228, 222, 222);
+
+            }
+        }
+    }
+}
