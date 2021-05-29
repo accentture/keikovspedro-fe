@@ -9,10 +9,12 @@ import { CandidatesModule } from './candidates/candidates.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
+import { UserLogoutComponent } from './users/user-logout.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UserLogoutComponent
   ],
   imports: [
     BrowserModule,

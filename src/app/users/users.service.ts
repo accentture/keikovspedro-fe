@@ -7,22 +7,26 @@ import { UserModel } from './user.model';
   providedIn: 'root'
 })
 export class UsersService {
-  apiUrl = environment.apiUrl
-  /* token:string = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MGFmYjVjNjYzNWQ0NTE2ZThlNDZkNGYiLCJpYXQiOjE2MjIxMjk2NDEsImV4cCI6MTYyMjczNDQ0MX0._x2H5I6taMtQXvfjfp_W4XH2V_DQ2xv7oAFFQOWIGdg'
-  headers = new HttpHeaders().set('Content-Type','application/json').set('nk-token', this.token); */
-  
+  private apiUrl = environment.apiUrl
+  private headers = new HttpHeaders().set('Content-Type', 'application/json')
+  private nameUserLocalStorage: string = 'data_user';
+
   constructor(
-    private http:HttpClient
+    private http: HttpClient
   ) { }
-  register(user:UserModel){
+  register(user: UserModel) {
     const params = JSON.stringify(user);
-    return this.http.post(`${this.apiUrl}/keikovspedro/users/register`, params )
+    return this.http.post(`${this.apiUrl}/keikovspedro/users/register`, params)
   }
-  login(user:UserModel){
+  login(user: UserModel) {
     console.log(user)
     const params = JSON.stringify(user);
-    return this.http.post(`${this.apiUrl}/keikovspedro/users/login`, params )
+    return this.http.post(`${this.apiUrl}/keikovspedro/users/login`, params, { headers: this.headers })
   }
-  
-
+  saveUserLocalStorage(dataUser: object) {
+    localStorage.setItem(this.nameUserLocalStorage, JSON.stringify(dataUser));
+  }
 }
+
+
+

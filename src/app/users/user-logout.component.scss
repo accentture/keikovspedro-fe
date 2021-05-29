@@ -1,0 +1,26 @@
+
+img{
+    width:100%;
+    height: 100%;
+}
+div.button-close-session{
+    display: flex;
+    align-items: center;
+    height: 43px;
+    text-align: center;
+    position: absolute;
+    top: 70px;
+    background-color: #d3d306;
+    border-radius: 4px;
+    visibility: hidden;
+    transition: 300ms;
+    cursor:pointer;
+}
+div.button-close-session:hover{
+    background-color: #fcfc00;   
+}
+div.showButton{
+    visibility: visible;
+}
+
+

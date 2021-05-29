@@ -62,14 +62,14 @@ form{
         margin:0 auto;
         margin-top:10px; 
         border-radius:4px;
-        background-color:#0b0b58;
+        background-color:green;
         color:white;
         font-weight: bolder;
         cursor:pointer;
     }
     input[type="submit"]:disabled{
 
-        background-color:#4f4fbd;
+        background-color:rgb(62, 180, 62);
         cursor:not-allowed;
     }
     input[type="submit"]:active{
@@ -78,7 +78,7 @@ form{
         margin:0 auto;
         margin-top:10px;
         border-radius:4px;
-        background-color:#1212cc;
+        background-color:rgb(26, 170, 26);
         color:white;
         font-weight: bolder;
     }

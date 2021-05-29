@@ -1,1 +1,9 @@
+<header>
+    <h1>KEIKO  VS  PEDRO</h1>
+    <user-logout class="user-logout-component" 
+        *ngIf="userLoged"
+        (stateLogin)="updateStateLogin($event)"
+    ></user-logout>
+</header>
+
 <router-outlet></router-outlet>

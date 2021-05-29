@@ -6,6 +6,10 @@
     mat-card{
         width:25%;
 
+        img{
+            height: 370px;
+        }
+        
         mat-card-actions{
             display: flex;
             justify-content:space-evenly;
